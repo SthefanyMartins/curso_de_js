@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercício 5</title>
+	<script type="text/javascript">
+		function habilidades(user){
+			for(usuario of user){
+				console.log("O "+usuario['nome']+" possui as habilidades: "+usuario['habilidades'].join(', '));
+			}
+			
+		}
+
+		var usuarios = [
+	 		{
+	 			nome: "Diego",
+	 			habilidades: ["Javascript", "ReactJS", "Redux"]
+	 		},
+	 		{
+				nome: "Gabriel",
+				habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+			}
+		];
+		habilidades(usuarios);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

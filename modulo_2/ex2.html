@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercício 2</title>
+</head>
+<body>
+	<div id="app">
+		
+	</div>
+	<script type="text/javascript">
+		var containerElement = document.querySelector('#app');
+		var btnElement = document.createElement('button');
+		var txtElement = document.createTextNode('Me aperte');
+		btnElement.appendChild(txtElement);
+		containerElement.appendChild(btnElement);
+		
+		function getRandomColor() {
+			 var letters = "0123456789ABCDEF";
+			 var color = "#";
+			 for (var i = 0; i < 6; i++) {
+				color += letters[Math.floor(Math.random() * 16)];
+			}
+			return color;
+		};
+
+		btnElement.onclick = function(){
+			var boxElement = document.createElement('div');
+			boxElement.style.width = '100px';
+			boxElement.style.height = '100px';
+			boxElement.style.backgroundColor = 'red';
+			boxElement.style.marginTop = '30px';
+			boxElement.onmouseover = function(){
+				//alert('entrou');
+				var newColor = getRandomColor();
+				//boxElement.appendChild(newColor);
+				boxElement.style.backgroundColor = newColor;
+			};
+			containerElement.appendChild(boxElement);
+		};
+
+		
+	</script>
+</body>
+</html>

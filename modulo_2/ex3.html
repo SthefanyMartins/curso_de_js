@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercício 3</title>
+</head>
+<body>
+	<div id="app"></div>
+	<script type="text/javascript">
+		var container = document.querySelector('#app');
+		var nomes = ["Diego", "Gabriel", "Lucas"];
+		var lista = document.createElement('ul');
+		for(let nome of nomes){
+			var linha = document.createElement('li');
+			var texto = document.createTextNode(nome);
+			linha.appendChild(texto);
+			lista.appendChild(linha);
+			container.appendChild(lista);
+		}
+	</script>
+</body>
+</html>

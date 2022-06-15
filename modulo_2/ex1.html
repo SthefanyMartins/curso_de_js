@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercício 1</title>
+</head>
+<body>
+	<div id="app">
+		
+	</div>
+	<script type="text/javascript">
+		
+		var containerElement = document.querySelector('#app');
+		var btnElement = document.createElement('button');
+		var txtElement = document.createTextNode('Me aperte');
+		btnElement.appendChild(txtElement);
+		containerElement.appendChild(btnElement);
+		
+
+		btnElement.onclick = function(){
+			var boxElement = document.createElement('div');
+			boxElement.style.width = '100px';
+			boxElement.style.height = '100px';
+			boxElement.style.backgroundColor = 'red';
+			boxElement.style.marginTop = '30px';
+			containerElement.appendChild(boxElement);
+		}
+	</script>
+</body>
+</html>

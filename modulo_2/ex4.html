@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercício 4</title>
+</head>
+<body>
+	<div id="app">
+		<input type="text" name="nome">
+		<button>Adicionar</button>
+	</div>
+	<script type="text/javascript">
+		var container = document.getElementById('app');
+		var btnElement = document.querySelector('div#app button');
+		var nomes = ["Diego", "Gabriel", "Lucas"];
+		var lista = document.createElement('ul');
+		for(let nome of nomes){
+			var linha = document.createElement('li');
+			var texto = document.createTextNode(nome);
+			linha.appendChild(texto);
+			lista.appendChild(linha);
+			container.appendChild(lista);
+		}
+
+
+		btnElement.onclick = function(){
+			var lblElement = document.querySelector('div#app input');
+			console.log(lblElement.value);
+			var linha = document.createElement('li');
+			var texto = document.createTextNode(lblElement.value);
+			linha.appendChild(texto);
+			lista.appendChild(linha);
+			container.appendChild(lista);
+		}
+	</script>
+</body>
+</html>
